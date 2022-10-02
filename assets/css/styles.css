@@ -740,11 +740,156 @@ a.dotted-link:hover {
 
 .alert{
   width: 100%;
-  background: rgb(0, 255, 106);
+  background: rgb(255, 255, 255);
   padding: 10px 20px;
   border-radius: 5px;
   text-align: center;
   font-size: 18px;
   font-weight: 900;
   display: none;
+} display: none;
+}
+
+.tab-container {
+  width: 992px;
+  margin: 0 auto;
+}
+
+.tab-header {
+  display: flex;
+  border-bottom: 1px solid #b29264;
+}
+
+.btn {
+  position: relative;
+  top: 1px;
+  /* width: 33.3%; */
+  background-color: #b29264;
+  border: none;
+  outline: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #b29264;
+}
+
+.btn.active {
+  border: 1px solid #b29264;
+  border-bottom-color: #b29264;
+  border-radius: 5px 5px 0 0;
+}
+
+.tab-body {
+  padding: 0.5rem 1rem;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+.card {
+  position: relative;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  background: linear-gradient(to right, #1E2124, #17191C);
+  width: clamp(20rem, 25rem, 30rem);
+  border-radius: 0.5rem;
+  color: #b29264;
+}
+
+.card::before {
+  --space: 1rem;
+
+  content: attr(data-title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(var(--space) / 2);
+  left: calc(var(--space) / 2);
+  width: calc(100% - var(--space));
+  height: calc(100% - var(--space));
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  backdrop-filter: blur(0.5rem);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover:before {
+  height: 25%;
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+}
+
+.end1, .middle1, .middle2{
+    display: inline-block;
+    overflow:hidden;
+    height: 1.5em;
+}
+.end2{
+    position:absolute;
+    color:#b29264
+}
+.middle1, .middle2{
+    color: #b29264
+}
+.middle1 {
+    animation: ani1 5s infinite;
+    animation-delay: -3s;
+    max-width: 0;
+}
+.middle2 {
+    animation: ani2 5s infinite;
+    animation-delay: -3s;
+    max-width: 0;
+}
+
+@keyframes ani1 {
+    0% {
+    max-width: 500px;
+  }
+  
+  25% {
+    max-width: 0;
+  }
+  
+  75% {
+    max-width: 0;
+  }
+  
+  90% {
+    max-width: 500px;
+  }
+  
+  100% {
+    max-width: 500px;
+  }
+}
+
+@keyframes ani2 {
+    0% {
+        max-width: 0;
+    }
+
+    25% {
+        max-width: 0;
+    }
+
+    50% {
+        max-width: 500px;
+    }
+
+    75% {
+        max-width: 0;
+    }
+
+    100% {
+        max-width: 0;
+    }
 }
