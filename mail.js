@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyA9xCtLBm_wy0NnvBzWibZgSUCyjQEDnmE",
-  authDomain: "contactform-5bb4b.firebaseapp.com",
-  databaseURL: "https://contactform-5bb4b-default-rtdb.firebaseio.com",
-  projectId: "contactform-5bb4b",
-  storageBucket: "contactform-5bb4b.appspot.com",
-  messagingSenderId: "89244140404",
-  appId: "1:89244140404:web:c4c038ac28eb408df0e221"
+  apiKey: "AIzaSyARlLgiE_i18zaZUOhKzLbWTW-tF0f62uk",
+  authDomain: "contactform-5114d.firebaseapp.com",
+  databaseURL: "https://contactform-5114d-default-rtdb.firebaseio.com",
+  projectId: "contactform-5114d",
+  storageBucket: "contactform-5114d.appspot.com",
+  messagingSenderId: "1097519611904",
+  appId: "1:1097519611904:web:47227caa197d5a279618e5"
 };
 
 // initialize firebase
@@ -50,3 +50,4 @@ const saveMessages = (name, emailid, msgContent) => {
 const getElementVal = (id) => {
   return document.getElementById(id).value;
 };
+
